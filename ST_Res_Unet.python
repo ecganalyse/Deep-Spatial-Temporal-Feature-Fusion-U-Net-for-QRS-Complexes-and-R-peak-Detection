@@ -22,7 +22,7 @@ def respath(layer,n):
     add = layers.add([conv1, conv2])
     return add
 
-def buildModelCNNLSTM(input_length=5000, nChannels=1):
+def buildModelSTResUnet(input_length=5000, nChannels=1):
     inputs = Input((input_length,nChannels))
     unet1 = cnnlstm(inputs,8)
     res1 = respath(unet1, 1)
